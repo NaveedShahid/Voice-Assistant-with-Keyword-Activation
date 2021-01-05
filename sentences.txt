@@ -1,0 +1,9 @@
+[Lights On]
+turn (on | off){state} [the] (living room | living room |  kitchen){location} ( lamp | light){appliance}
+    
+[CallSomeone]
+call (any:Anny | Sid | Bera){contact}
+    
+[SetLightColor]
+set the (light | lights) to (read:red | green | blue){color}
+
