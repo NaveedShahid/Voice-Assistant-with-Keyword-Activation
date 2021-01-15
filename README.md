@@ -1,5 +1,5 @@
 # Voice-Assistant-with-Keyword-Activation
-A simple CLI python system that uses wakeword detection (Raven)[https://github.com/rhasspy/rhasspy-wake-raven] and uses Google's STT and (rhasspy-nlu)[https://github.com/rhasspy/rhasspy-nlu] for command recognition.
+A simple CLI python system that uses wakeword detection [Raven](https://github.com/rhasspy/rhasspy-wake-raven) and uses Google's STT and [rhasspy-nlu](https://github.com/rhasspy/rhasspy-nlu) for command recognition.
 
 ## Wake word detection
 First, the user needs to enroll his voice using the following command
@@ -11,9 +11,9 @@ $ make install``
 
 For enrolling a user, type:
 
-``$ bin/voice_assisted_control --record users/Seeen/keyword_dir/ "Seeen_{n:02d}.wav"``
+``$ bin/voice_assisted_control --record users/<your_name>/keyword_dir/ "Seeen_{n:02d}.wav"``
 	
-Note: Replace Seeen with your user name and record atleast 3 files with clear audio (listen to make sure)
+Note: Replace <your_name> with your user name and record atleast 3 files with clear audio (listen to make sure)
 Next add the proper lines and parameters for the wake word detection in etc/keyword_map/keyword_map.csv
 	1 Seeen	 Sunshine	users/Seen/keyword_dir/	0.45	1	1	0.2
 	Note: wake word sensitivity is controlled by probability threshold, minimum matches depend on number of files
