@@ -3,13 +3,15 @@ A simple CLI python system that uses wakeword detection (Raven)[https://github.c
 
 ## Wake word detection
 First, the user needs to enroll his voice using the following command
-	``$ cd voice_assisted_control`` 
-	``$ ./configure``
-	``$ make``
-	``$ make install``
 
-For enrolling a user, type
-	``$ bin/voice_assisted_control --record users/Seeen/keyword_dir/ "Seeen_{n:02d}.wav"``
+``$ cd voice_assisted_control
+$ ./configure
+$ make
+$ make install``
+
+For enrolling a user, type:
+
+``$ bin/voice_assisted_control --record users/Seeen/keyword_dir/ "Seeen_{n:02d}.wav"``
 	
 Note: Replace Seeen with your user name and record atleast 3 files with clear audio (listen to make sure)
 Next add the proper lines and parameters for the wake word detection in etc/keyword_map/keyword_map.csv
@@ -19,8 +21,9 @@ Next add the proper lines and parameters for the wake word detection in etc/keyw
 	lower chance of false activation), skip_probability can be controlled to reduce process time, 0 means faster.
 
 Now run the application
-	$ cd voice_assisted_control 
-	$ bin/voice_assisted_control 
+
+	``$ cd voice_assisted_control 
+	$ bin/voice_assisted_control ``
 
 The application will start listening for wake word. speak your enrolled word to activate, if the program does not catch wake word,
 adjust the probability_threshold (lower means more sensitive) it in the keyword_map.csv
