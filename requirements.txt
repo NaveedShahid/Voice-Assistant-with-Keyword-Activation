@@ -1,0 +1,12 @@
+python_speech_features
+scipy
+rhasspy-silence
+pandas
+numpy
+halo
+rhasspy-nlu
+soundfile
+sklearn
+sounddevice
+
+
