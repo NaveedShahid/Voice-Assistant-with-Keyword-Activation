@@ -22,7 +22,7 @@ Next add the proper lines and parameters for the wake word detection in etc/keyw
 
 Now run the application
 
-	``$ cd voice_assisted_control 
+  ``$ cd voice_assisted_control 
 	$ bin/voice_assisted_control ``
 
 The application will start listening for wake word. speak your enrolled word to activate, if the program does not catch wake word,
