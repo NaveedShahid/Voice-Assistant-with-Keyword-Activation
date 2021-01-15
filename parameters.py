@@ -30,5 +30,5 @@ MAX_ENERGY = None
 CURRENT_THRESHOLD = None
 
 # Google API Settings
-GOOGLE_APPLICATION_CREDENTIALS = "My Project 29401-f3f7fe81193f.json"
-GOOGLE_API_KEY = "AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw" #Test key, use your own if this expires
+GOOGLE_APPLICATION_CREDENTIALS = "<path/to/gcp credentials in json>"
+GOOGLE_API_KEY = "<path/to/api/key>" #Test key, use your own if this expires
