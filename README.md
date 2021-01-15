@@ -4,16 +4,16 @@ A simple CLI python system that uses wakeword detection [Raven](https://github.c
 ## Wake word detection
 First, the user needs to enroll his voice using the following command
 
-``$ cd voice_assisted_control
-$ ./configure
-$ make
-$ make install``
+``$ cd voice_assisted_control``
+``$ ./configure``
+``$ make``
+``$ make install``
 
 For enrolling a user, type:
 
 ``$ bin/voice_assisted_control --record users/<your_name>/keyword_dir/ "Seeen_{n:02d}.wav"``
 	
-Note: Replace <your_name> with your user name and record atleast 3 files with clear audio (listen to make sure)
+Note: Replace *<your_name>* with your user name and record atleast 3 files with clear audio (listen to make sure)
 Next add the proper lines and parameters for the wake word detection in etc/keyword_map/keyword_map.csv
 	1 Seeen	 Sunshine	users/Seen/keyword_dir/	0.45	1	1	0.2
 	Note: wake word sensitivity is controlled by probability threshold, minimum matches depend on number of files
@@ -22,8 +22,8 @@ Next add the proper lines and parameters for the wake word detection in etc/keyw
 
 Now run the application
 
-  ``$ cd voice_assisted_control 
-	$ bin/voice_assisted_control ``
+  ``$ cd voice_assisted_control ``
+  ``$ bin/voice_assisted_control ``
 
 The application will start listening for wake word. speak your enrolled word to activate, if the program does not catch wake word,
 adjust the probability_threshold (lower means more sensitive) it in the keyword_map.csv
@@ -31,12 +31,11 @@ adjust the probability_threshold (lower means more sensitive) it in the keyword_
 Once speech is detected, program will try connecting to Google Cloud api, if succesful, it will start listening for commands
 It will listen and translate text once, if the command is not detected, the application will restart and listen for wake word
 
-For command identification, some code needs to be altered to use an ini file, check this link
-	 (rhasspy-nlue)[https://github.com/rhasspy/rhasspy-nlu]
+For command identification, some code needs to be altered to use an ini file, check out [rhasspy-nlu](https://github.com/rhasspy/rhasspy-nlu)
 
 for this to work properly, you need to specify task based commands in a format like this in a sentence.ini file
-    ``[LightOn]
-	turn on [the] (living room lamp | kitchen light){name}``
+    ``[LightOn]``
+	``turn on [the] (living room lamp | kitchen light){name}``
 You can add any commands to this file in a format as mentioned in the link. Once the command is recognized
 a json format code is returned which can be used to trigger code from raspberry pi
 
@@ -52,14 +51,14 @@ gmm model accuracy is low and depends on the quality of audio recorded and the n
 On the first run, application if not connected to WiFi will train the models and store them, next speak a command for recognition
 Note that the commands formats in sentence.txt can be many for better command detection
 like 
-	``[LightOn]
-	turn on [the] (living room lamp | kitchen light){name}``s
+	``[LightOn]``
+	``turn on [the] (living room lamp | kitchen light){name}``
 
 which works for all
-	turn on living room lamp
- 	turn on the living room lamp
-	turn on kitchen light
-	turn on the kitchen light
+	__turn on living room lamp__
+ 	__turn on the living room lamp__
+	__turn on kitchen light__
+	__turn on the kitchen light__
 
 The above mentioned recording scripts are for testing purposes only considering your main goal is to take audio files from android, 
 store on rpi, that is why the csv file can be connected to android to control thresholds and keyword names. I do not know your use
