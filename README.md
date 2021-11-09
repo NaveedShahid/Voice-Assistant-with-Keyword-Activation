@@ -33,9 +33,9 @@ It will listen and translate text once, if the command is not detected, the appl
 
 For command identification, some code needs to be altered to use an ini file, check out [rhasspy-nlu](https://github.com/rhasspy/rhasspy-nlu)
 
-for this to work properly, you need to specify task based commands in a format like this in a sentence.ini file  
-    ``[LightOn]``
-	``turn on [the] (living room lamp | kitchen light){name}``
+for this to work properly, you need to specify task based commands in a format like this in a sentence.ini file    
+``[LightOn]``  
+``turn on [the] (living room lamp | kitchen light){name}``
 You can add any commands to this file in a format as mentioned in the link. Once the command is recognized
 a json format code is returned which can be used to trigger code from raspberry pi
 
